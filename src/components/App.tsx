@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TaskPage from './Pages/TaskPage';
 
 // ログインの画面処理や画面遷移などを記述
-function App() {
+const App = () => {
+  const [count, setCount] = useState(0);
   return (
-    <TaskPage />
+    <div onClick={() => setCount(count + 1)}>
+      {count}
+      <TaskPage />
+    </div>
   );
 }
 
